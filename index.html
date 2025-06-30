@@ -47,7 +47,7 @@
 <body>
 
 
-  <section class="hero" style="background-color: #e6f2ff;">
+  <section class="hero" style="background-color: #e6f2ff; position: relative;">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -56,10 +56,7 @@
             <div class="is-size-5 publication-authors">
               <!-- Team members and advisor -->
               <span class="author-block">
-                队员：李旭 黄煜铭</span>
-                <br>
-                <span class="author-block">
-                  指导教师：郭迪
+                队员：李旭 黄煜铭 &nbsp;&nbsp;&nbsp;&nbsp; 指导教师：郭迪
                 </span>
                   </div>
 
@@ -71,14 +68,21 @@
         </div>
       </div>
     </div>
+    <!-- Decorative divider with white transition and gray gradient -->
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 18px;">
+      <!-- White transition strip -->
+      <div style="height: 15px; background: #ffffff;"></div>
+      <!-- Gray gradient divider (white to gray to white horizontally) -->
+      <div style="height: 3px; background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%); box-shadow: 0 1px 1px rgba(0,0,0,0.05);"></div>
+    </div>
   </div>
 </section>
 
 
 <!-- Teaser video-->
-<section class="hero teaser" style="background-color: #ffffff;">
+<section class="hero teaser" style="background-color: #ffffff; position: relative; margin-top: 0; padding-top: 0;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="hero-body" style="padding-top: 1rem;">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
@@ -89,11 +93,13 @@
       </h2>
     </div>
   </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
-<section class="section hero" style="background-color: #f8f9fa;">
+<section class="section hero" style="background-color: #f8f9fa; position: relative;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -106,12 +112,14 @@
       </div>
     </div>
   </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
 <!-- End paper abstract -->
 
 
 <!-- Image carousel -->
-<section class="hero is-small" style="background-color: #ffffff;">
+<section class="hero is-small" style="background-color: #ffffff; position: relative;">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -146,6 +154,8 @@
   </div>
 </div>
 </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
 <!-- End image carousel -->
 
@@ -153,7 +163,7 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small" style="background-color: #f8f9fa;">
+<section class="hero is-small" style="background-color: #f8f9fa; position: relative;">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
@@ -169,12 +179,14 @@
       </div>
     </div>
   </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small" style="background-color: #ffffff;">
+<section class="hero is-small" style="background-color: #ffffff; position: relative;">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
@@ -203,6 +215,8 @@
       </div>
     </div>
   </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
 <!-- End video carousel -->
 
@@ -212,7 +226,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small" style="background-color: #f8f9fa;">
+<section class="hero is-small" style="background-color: #f8f9fa; position: relative;">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -222,6 +236,8 @@
         
       </div>
     </div>
+    <!-- Subtle divider -->
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
   </section>
 <!--End paper poster -->
 
