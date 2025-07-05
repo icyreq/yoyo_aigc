@@ -25,7 +25,7 @@
 
 
   <title>基于VIVO蓝心大模型的智能机器人操作Agent</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -79,34 +79,22 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser" style="background-color: #ffffff; position: relative; margin-top: 0; padding-top: 0;">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="padding-top: 1rem;">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
-<section class="section hero" style="background-color: #f8f9fa; position: relative;">
+<section class="section hero" style="background-color: #ffffff; position: relative; margin-top: 0; padding-top: 2rem;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+        <h2 class="title is-3" style="color: #2c3e50;">项目摘要</h2>
+        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.8;">
+          <p style="color: #495057;">
+            本项目提出了一个基于VIVO蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。
+            系统采用能力解耦的设计理念，将大语言模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、
+            专用抓取模型的位姿生成能力以及传统路径规划的安全轨迹生成能力有机结合。
+          </p>
+          <p style="color: #495057;">
+            通过构建协同工作框架，系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。
+            这种非端到端的训练方式最大化利用了各模块的优势，同时规避了视觉语言模型在几何理解方面的局限性，
+            显著提高了系统的鲁棒性、泛化性和执行效率。
           </p>
         </div>
       </div>
@@ -117,63 +105,65 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Creative Concept Section -->
+<section class="section hero" style="background-color: #f8f9fa; position: relative;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="color: #2c3e50; margin-bottom: 2rem;">创意阐述</h2>
+        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.8;">
+          <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #007bff;">
+            <p style="margin-bottom: 1.5rem; font-weight: 600; color: #2c3e50;">
+              <strong>提出并实现一个基于蓝心大模型的智能机器人操作Agent</strong>
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              深度融合LLM的策略生成能力与基于视觉的抓取及传统路径规划能力。
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              验证在无需特定任务微调的情况下，处理桌面复杂操作任务的可行性。
+            </p>
+          </div>
 
-<!-- Image carousel -->
-<section class="hero is-small" style="background-color: #ffffff; position: relative;">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End image carousel -->
+          <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #ffc107;">
+            <h4 style="color: #856404; margin-bottom: 1rem; font-weight: 600;">核心思路: 能力解耦与优势整合</h4>
+            <p style="margin-bottom: 1rem; color: #856404;">
+              <strong>非端到端训练:</strong> 专注于构建一个协同工作框架 (Integration Framework)
+            </p>
+          </div>
 
+          <div class="columns is-multiline" style="margin-top: 2rem;">
+            <div class="column is-half">
+              <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #2196f3;">
+                <h5 style="color: #1976d2; font-weight: 600; margin-bottom: 0.8rem;">🧠 LLM</h5>
+                <p style="color: #1976d2; margin: 0;">负责高层语义理解、策略规划<br>(利用其推理泛化能力)</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #9c27b0;">
+                <h5 style="color: #7b1fa2; font-weight: 600; margin-bottom: 0.8rem;">👁️ 视觉基础模型</h5>
+                <p style="color: #7b1fa2; margin: 0;">实时精确的视觉感知<br>(物体检测、分割、定位)</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #4caf50;">
+                <h5 style="color: #388e3c; font-weight: 600; margin-bottom: 0.8rem;">🤖 专用抓取模型</h5>
+                <p style="color: #388e3c; margin: 0;">生成精确的抓取位姿</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #ff9800;">
+                <h5 style="color: #f57c00; font-weight: 600; margin-bottom: 0.8rem;">🛤️ 传统路径规划</h5>
+                <p style="color: #f57c00; margin: 0;">生成安全无碰撞运动轨迹</p>
+              </div>
+            </div>
+          </div>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small" style="background-color: #f8f9fa; position: relative;">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #28a745;">
+            <p style="color: #155724; margin: 0; font-weight: 500; text-align: center;">
+              <strong>最大化利用各模块优势，规避短板</strong><br>
+              (特别是VLM的幻觉和几何弱点)<br>
+              <strong>提高系统鲁棒性、泛化性和效率</strong>
+            </p>
           </div>
         </div>
       </div>
@@ -182,77 +172,138 @@
   <!-- Subtle divider -->
   <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
-<!-- End youtube video -->
+<!-- End Creative Concept Section -->
 
+<!-- Architecture video-->
+<section class="hero teaser" style="background-color: #ffffff; position: relative;">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="padding-top: 2rem;">
+      <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">系统架构演示</h2>
+      <video poster="" id="architecture-video" autoplay controls muted loop height="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <!-- Architecture video here -->
+        <source src="static/videos/架构视频.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; color: #6c757d;">
+        基于蓝心大模型的智能机器人操作Agent系统架构展示
+      </h2>
+    </div>
+  </div>
+  <!-- Subtle divider -->
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
+</section>
+<!-- End architecture video -->
 
-<!-- Video carousel -->
-<section class="hero is-small" style="background-color: #ffffff; position: relative;">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+<!-- Demo Videos Section -->
+<section class="section hero" style="background-color: #f8f9fa; position: relative;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="color: #2c3e50; margin-bottom: 3rem;">实机演示</h2>
+
+        <!-- Task Execution Demos -->
+        <div style="margin-bottom: 4rem;">
+          <h3 class="title is-4" style="color: #495057; margin-bottom: 2rem;">🤖 任务执行演示</h3>
+          <div class="columns is-multiline">
+
+            <!-- Demo 1: 给我苹果 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务1: 杂乱桌面中物体识别与抓取</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/给我苹果.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  使用prompt：“给我苹果”
+                </p>
+              </div>
+            </div>
+
+            <!-- Demo 2: 把苹果放到汉堡右面 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务2: 物品识别与空间关系理解能力</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/把苹果放到汉堡右面.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  使用prompt：“把苹果放到汉堡右面”
+                </p>
+              </div>
+            </div>
+
+            <!-- Demo 3: 帮我把苹果放进抽屉 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务3: 日常生活场景演示</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/帮我把苹果放进抽屉.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  使用prompt：“帮我把苹果放进抽屉”
+                </p>
+              </div>
+            </div>
+
+            <!-- Demo 4: 帮我把汉堡放进抽屉 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务4: 日常生活场景演示</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/帮我把汉堡放进抽屉.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  使用prompt：“帮我把汉堡放进抽屉”
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+
+        <!-- System Internal Demos -->
+        <div>
+          <h3 class="title is-4" style="color: #495057; margin-bottom: 2rem;">💻 系统内部运行展示</h3>
+          <div class="columns">
+
+            <!-- Internal Demo 1: 苹果抽屉电脑界面 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">苹果 -> 存放</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/苹果抽屉电脑界面.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  
+                </p>
+              </div>
+            </div>
+
+            <!-- Internal Demo 2: 汉堡抽屉电脑界面 -->
+            <div class="column is-half">
+              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">汉堡 -> 存放</h4>
+                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                  <source src="static/videos/汉堡抽屉电脑界面.mp4" type="video/mp4">
+                </video>
+                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                  
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+
       </div>
     </div>
   </div>
   <!-- Subtle divider -->
   <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
 </section>
-<!-- End video carousel -->
+<!-- End Demo Videos Section -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small" style="background-color: #f8f9fa; position: relative;">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-    <!-- Subtle divider -->
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX" style="background-color: #ffffff;">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
