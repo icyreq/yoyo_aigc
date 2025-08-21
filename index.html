@@ -1,331 +1,300 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
   <title>基于VIVO蓝心大模型的智能机器人操作Agent</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <!-- Apple 风格字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <style>
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f8ff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    h1.title {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    h2.title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #a8d8ff 0%, #6fbfff 100%);
+      color: #fff;
+      text-align: center;
+      padding: 8rem 2rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    .content img, video {
+      width: 100%;
+      border-radius: 16px;
+      margin: 2rem 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(111,191,255,0.25);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(111,191,255,0.35);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .modules-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .module-card {
+      width: 100%;
+      background: #f0f8ff; /* 浅蓝渐变可以加在这里 */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .module-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+
+    footer {
+      background: linear-gradient(135deg, #6fbfff 0%, #4aa3f0 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+    footer a { color: #fff; text-decoration: underline; }
+    /* 图片点击放大样式 */
+  .content img, .card img, .module-card img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .content img:hover, .card img:hover, .module-card img:hover {
+    transform: scale(1.05);
+  }
+
+  /* 弹窗覆盖层 */
+  #imgModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  #imgModal img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+
+  /* 关闭按钮 */
+  #imgModal span {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  </style>
 </head>
 <body>
 
+  <!-- 顶部 Hero -->
+  <section class="hero">
+    <h1>基于VIVO蓝心大模型的智能机器人操作Agent</h1>
+    <p>北京邮电大学 · 指导教师：郭迪 · 队员：李旭 黄煜铭</p>
+  </section>
 
-  <section class="hero" style="background-color: #e6f2ff; position: relative;">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">基于VIVO蓝心大模型的智能机器人操作Agent</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Team members and advisor -->
-              <span class="author-block">
-                队员：李旭 黄煜铭 &nbsp;&nbsp;&nbsp;&nbsp; 指导教师：郭迪
-                </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">北京邮电大学</span>
-                  </div>
-
-
-        </div>
-      </div>
+  <!-- 作品介绍 -->
+  <section>
+    <h2 class="title">作品介绍</h2>
+    <div class="content">
+      <p>本作品是一个基于VIVO蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。系统采用能力解耦的设计理念，将大语言模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、专用抓取模型的位姿生成能力以及传统路径规划的安全轨迹生成能力有机结合。</p>
+      <img src="static/images/abstract.png" alt="系统介绍图">
+      <p>通过构建协同工作框架，系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。这种非端到端的训练方式最大化利用了各模块的优势，同时规避了视觉语言模型在几何理解方面的局限性，显著提高了系统的鲁棒性、泛化性和执行效率。</p>
     </div>
-    <!-- Decorative divider with white transition and gray gradient -->
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 18px;">
-      <!-- White transition strip -->
-      <div style="height: 15px; background: #ffffff;"></div>
-      <!-- Gray gradient divider (white to gray to white horizontally) -->
-      <div style="height: 3px; background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%); box-shadow: 0 1px 1px rgba(0,0,0,0.05);"></div>
+  </section>
+
+  <!-- 创意阐述 -->
+  <section style="background:linear-gradient(135deg,#e6f5ff 0%,#d4ebff 100%); border-radius: 20px;">
+    <h2 class="title">创意阐述</h2>
+    <div class="card">
+      <h3>核心思路: 能力解耦与优势整合</h3>
+      <p>深度融合蓝心大模型的策略生成能力与基于视觉的抓取及传统路径规划能力，验证在无需特定任务微调的情况下，处理桌面复杂操作任务的可行性。</p>
+      <img src="static/images/process.png" alt="系统流程图">
     </div>
+
+    <div class="card">
+      <h3>模块分工</h3>
+      <div class="modules-container">
+  <div class="module-card">
+    <img src="static/images/bluebrain.png" alt="蓝心大模型">
+    <h3>🧠 蓝心大模型</h3>
+    <p>高层语义理解与策略规划</p>
   </div>
-</section>
 
-
-<!-- Paper abstract -->
-<section class="section hero" style="background-color: #ffffff; position: relative; margin-top: 0; padding-top: 2rem;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" style="color: #2c3e50;">项目摘要</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.8;">
-          <p style="color: #495057;">
-            本项目提出了一个基于VIVO蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。
-            系统采用能力解耦的设计理念，将大语言模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、
-            专用抓取模型的位姿生成能力以及传统路径规划的安全轨迹生成能力有机结合。
-          </p>
-          <p style="color: #495057;">
-            通过构建协同工作框架，系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。
-            这种非端到端的训练方式最大化利用了各模块的优势，同时规避了视觉语言模型在几何理解方面的局限性，
-            显著提高了系统的鲁棒性、泛化性和执行效率。
-          </p>
-        </div>
-      </div>
-    </div>
+  <div class="module-card">
+    <img src="static/images/vision.png" alt="视觉基础模型">
+    <h3>👁️ 视觉基础模型</h3>
+    <p>实时精确的视觉感知</p>
   </div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End paper abstract -->
 
-<!-- Creative Concept Section -->
-<section class="section hero" style="background-color: #f8f9fa; position: relative;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" style="color: #2c3e50; margin-bottom: 2rem;">创意阐述</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.8;">
-          <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #007bff;">
-            <p style="margin-bottom: 1.5rem; font-weight: 600; color: #2c3e50;">
-              <strong>提出并实现一个基于蓝心大模型的智能机器人操作Agent</strong>
-            </p>
-            <p style="margin-bottom: 1.5rem;">
-              深度融合LLM的策略生成能力与基于视觉的抓取及传统路径规划能力。
-            </p>
-            <p style="margin-bottom: 1.5rem;">
-              验证在无需特定任务微调的情况下，处理桌面复杂操作任务的可行性。
-            </p>
-          </div>
 
-          <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #ffc107;">
-            <h4 style="color: #856404; margin-bottom: 1rem; font-weight: 600;">核心思路: 能力解耦与优势整合</h4>
-            <p style="margin-bottom: 1rem; color: #856404;">
-              <strong>非端到端训练:</strong> 专注于构建一个协同工作框架 (Integration Framework)
-            </p>
-          </div>
 
-          <div class="columns is-multiline" style="margin-top: 2rem;">
-            <div class="column is-half">
-              <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #2196f3;">
-                <h5 style="color: #1976d2; font-weight: 600; margin-bottom: 0.8rem;">🧠 LLM</h5>
-                <p style="color: #1976d2; margin: 0;">负责高层语义理解、策略规划<br>(利用其推理泛化能力)</p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #9c27b0;">
-                <h5 style="color: #7b1fa2; font-weight: 600; margin-bottom: 0.8rem;">👁️ 视觉基础模型</h5>
-                <p style="color: #7b1fa2; margin: 0;">实时精确的视觉感知<br>(物体检测、分割、定位)</p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #4caf50;">
-                <h5 style="color: #388e3c; font-weight: 600; margin-bottom: 0.8rem;">🤖 专用抓取模型</h5>
-                <p style="color: #388e3c; margin: 0;">生成精确的抓取位姿</p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; height: 100%; border-left: 3px solid #ff9800;">
-                <h5 style="color: #f57c00; font-weight: 600; margin-bottom: 0.8rem;">🛤️ 传统路径规划</h5>
-                <p style="color: #f57c00; margin: 0;">生成安全无碰撞运动轨迹</p>
-              </div>
-            </div>
-          </div>
-
-          <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #28a745;">
-            <p style="color: #155724; margin: 0; font-weight: 500; text-align: center;">
-              <strong>最大化利用各模块优势，规避短板</strong><br>
-              (特别是VLM的幻觉和几何弱点)<br>
-              <strong>提高系统鲁棒性、泛化性和效率</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="module-card">
+    <img src="static/images/grasp.png" alt="专用抓取模型">
+    <h3>🤖 专用抓取模型</h3>
+    <p>生成精确的抓取位姿</p>
   </div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End Creative Concept Section -->
 
-<!-- Architecture video-->
-<section class="hero teaser" style="background-color: #ffffff; position: relative;">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="padding-top: 2rem;">
-      <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">系统架构演示</h2>
-      <video poster="" id="architecture-video" autoplay controls muted loop height="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        <!-- Architecture video here -->
-        <source src="static/videos/架构视频.mp4"
-        type="video/mp4">
+    <div class="module-card">
+    <img src="static/images/vlm.png" alt="视觉语言模型">
+    <h3>🎯️ 视觉语言模型</h3>
+    <p>选择准确的交互锚点</p>
+  </div>
+
+  <div class="module-card">
+    <img src="static/images/path.png" alt="路径规划与控制模块">
+    <h3>🛤️ 路径规划与控制模块</h3>
+    <p>生成安全无碰撞轨迹</p>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- 系统架构视频 -->
+  <section>
+    <h2 class="title">系统架构演示</h2>
+    <video autoplay muted loop controls>
+      <source src="static/videos/架构视频.mp4" type="video/mp4">
+    </video>
+    <p style="text-align:center; margin-top:1rem; color:#555;">基于蓝心大模型的智能机器人操作Agent系统架构展示</p>
+  </section>
+
+  <!-- 实机演示 -->
+  <section style="background:linear-gradient(135deg,#e6f5ff 0%,#d4ebff 100%); border-radius:20px;">
+    <h2 class="title">实机演示</h2>
+    <div class="card">
+      <h3>任务1: 杂乱桌面中物体识别与抓取</h3>
+      <video controls muted loop>
+        <source src="static/videos/给我苹果.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; color: #6c757d;">
-        基于蓝心大模型的智能机器人操作Agent系统架构展示
-      </h2>
+      <p>输入指令：“给我苹果”</p>
     </div>
-  </div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End architecture video -->
-
-<!-- Demo Videos Section -->
-<section class="section hero" style="background-color: #f8f9fa; position: relative;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <h2 class="title is-3" style="color: #2c3e50; margin-bottom: 3rem;">实机演示</h2>
-
-        <!-- Task Execution Demos -->
-        <div style="margin-bottom: 4rem;">
-          <h3 class="title is-4" style="color: #495057; margin-bottom: 2rem;">🤖 任务执行演示</h3>
-          <div class="columns is-multiline">
-
-            <!-- Demo 1: 给我苹果 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务1: 杂乱桌面中物体识别与抓取</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/给我苹果.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  输入指令：“给我苹果”
-                </p>
-              </div>
-            </div>
-
-            <!-- Demo 2: 把苹果放到汉堡右面 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务2: 物品识别与空间关系理解能力</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/把苹果放到汉堡右面.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  输入指令：“把苹果放到汉堡右面”
-                </p>
-              </div>
-            </div>
-
-            <!-- Demo 3: 帮我把苹果放进抽屉 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务3: 日常生活场景演示</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/帮我把苹果放进抽屉.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  输入指令：“帮我把苹果放进抽屉”
-                </p>
-              </div>
-            </div>
-
-            <!-- Demo 4: 帮我把汉堡放进抽屉 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务4: 日常生活场景演示</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/帮我把汉堡放进抽屉.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  输入指令：“帮我把汉堡放进抽屉”
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- System Internal Demos -->
-        <div>
-          <h3 class="title is-4" style="color: #495057; margin-bottom: 2rem;">💻 系统内部运行展示</h3>
-          <div class="columns">
-
-            <!-- Internal Demo 1: 苹果抽屉电脑界面 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务3 系统内部运行展示</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/苹果抽屉电脑界面.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  
-                </p>
-              </div>
-            </div>
-
-            <!-- Internal Demo 2: 汉堡抽屉电脑界面 -->
-            <div class="column is-half">
-              <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                <h4 style="color: #2c3e50; margin-bottom: 1rem; font-weight: 600;">任务4系统内部运行展示</h4>
-                <video controls muted loop style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                  <source src="static/videos/汉堡抽屉电脑界面.mp4" type="video/mp4">
-                </video>
-                <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
-                  
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
+    <div class="card">
+      <h3>任务2: 物品识别与空间关系理解能力</h3>
+      <video controls muted loop>
+        <source src="static/videos/把苹果放到汉堡右面.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“把苹果放到汉堡右面”</p>
     </div>
-  </div>
-  <!-- Subtle divider -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);"></div>
-</section>
-<!-- End Demo Videos Section -->
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
+    <div class="card">
+      <h3>任务3: 日常生活场景演示</h3>
+      <video controls muted loop>
+        <source src="static/videos/帮我把苹果放进抽屉.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“帮我把苹果放进抽屉”</p>
     </div>
-  </div>
-</footer>
+  </section>
+<!-- 弹窗结构 -->
+<div id="imgModal">
+  <span id="closeModal">&times;</span>
+  <img id="modalImg" src="">
+</div>
+  <!-- 页脚 -->
+  <footer>
+    <p>本页面基于 <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> 修改。<br>
+    本网站遵循 <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 协议</a>。</p>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<script>
+  // 获取所有图片
+  const images = document.querySelectorAll('.content img, .card img, .module-card img');
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeModal = document.getElementById("closeModal");
 
-    <!-- End of Statcounter Code -->
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
 
-  </body>
-  </html>
+  closeModal.onclick = () => { modal.style.display = "none"; }
+  modal.onclick = (e) => { if(e.target == modal) modal.style.display = "none"; }
+</script>
+</body>
+</html>
