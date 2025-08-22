@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>基于vivo蓝心大模型的智能机器人操作Agent</title>
 
-  <!-- Apple 风格字体 -->
+
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -165,6 +165,21 @@
     font-weight: bold;
     cursor: pointer;
   }
+  /* 下滑提醒上下浮动效果 */
+.scroll-reminder {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  animation: floatY 1.5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
   </style>
 </head>
 <body>
@@ -172,15 +187,22 @@
   <!-- 顶部 Hero -->
   <section class="hero">
     <h1>基于vivo蓝心大模型的智能机器人操作Agent</h1>
-    <p>Yoyo队员：李旭 黄煜铭 · 指导教师：郭迪 </p>
+    <p>Yoyo队员：李旭 黄煜铭 </p>
+     <p>指导教师：郭迪 </p>
      <p>北京邮电大学</p>
+      <!-- 下滑提醒 -->
+<!--  <div class="scroll-reminder">-->
+<!--    <div class="marquee">-->
+<!--      <span>↓</span>-->
+<!--    </div>-->
+<!--  </div>-->
   </section>
 
   <!-- 作品介绍 -->
   <section>
     <h2 class="title">作品介绍</h2>
     <div class="content">
-      <p>本作品是一个基于vivo蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。系统采用能力解耦的设计理念，将大语言模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、专用抓取模型的位姿生成能力以及传统路径规划的安全轨迹生成能力有机结合。</p>
+      <p>本作品是一个基于vivo蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。系统采用能力解耦的设计理念，将蓝心大模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、专用抓取模型的位姿生成能力以及路径规划模块的安全轨迹生成能力有机结合。</p>
       <img src="static/images/abstract.png" alt="系统介绍图">
       <p>通过构建协同工作框架，系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。这种非端到端的训练方式最大化利用了各模块的优势，同时规避了视觉语言模型在几何理解方面的局限性，显著提高了系统的鲁棒性、泛化性和执行效率。</p>
     </div>
@@ -196,7 +218,7 @@
     </div>
 
     <div class="card">
-      <h3>模块分工</h3>
+      <h3 style="text-align:center;">模块分工</h3>
       <div class="modules-container">
   <div class="module-card">
     <img src="static/images/bluebrain.png" alt="蓝心大模型">
@@ -242,6 +264,7 @@
       <source src="static/videos/架构视频.mp4" type="video/mp4">
     </video>
     <p style="text-align:center; margin-top:1rem; color:#555;">基于蓝心大模型的智能机器人操作Agent系统架构展示</p>
+    <div style="text-align:center;">（小U的自我介绍）</div>
   </section>
 
   <!-- 实机演示 -->
