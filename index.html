@@ -44,7 +44,11 @@
     p {
       font-size: 1.1rem;
       color: #333;
+
     }
+<!--    section .card p{-->
+<!--      text-align: center;-->
+<!--    }-->
 
     .hero {
       background: linear-gradient(135deg, #a8d8ff 0%, #6fbfff 100%);
@@ -198,13 +202,16 @@
 <!--  </div>-->
   </section>
 
+
+
+
   <!-- 作品介绍 -->
   <section>
     <h2 class="title">作品介绍</h2>
     <div class="content">
-      <p>本作品是一个基于vivo蓝心大模型的智能机器人操作Agent系统，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。系统采用能力解耦的设计理念，将蓝心大模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、专用抓取模型的位姿生成能力以及路径规划模块的安全轨迹生成能力有机结合。</p>
+      <p>小U是一个基于vivo蓝心大模型的智能机器人操作Agent，旨在解决复杂桌面操作任务中的智能决策与精确执行问题。它的整个系统采用能力解耦的设计理念，将蓝心大模型的高层语义理解与策略规划能力、视觉基础模型的精确感知能力、专用抓取模型的位姿生成能力、视觉语言模型的空间理解能力以及路径规划模块的安全轨迹生成能力有机结合。</p>
       <img src="static/images/abstract.png" alt="系统介绍图">
-      <p>通过构建协同工作框架，系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。这种非端到端的训练方式最大化利用了各模块的优势，同时规避了视觉语言模型在几何理解方面的局限性，显著提高了系统的鲁棒性、泛化性和执行效率。</p>
+      <p>通过构建协同工作框架，整个系统能够在无需特定任务微调的情况下，有效处理各种复杂的桌面操作任务。这种非端到端的架构最大化利用了各模块的优势，同时激发了视觉语言模型在空间理解与决策方面的能力，显著提高了系统的鲁棒性、泛化性和执行效率。</p>
     </div>
   </section>
 
@@ -213,8 +220,8 @@
     <h2 class="title">创意阐述</h2>
     <div class="card">
       <h3>核心思路: 能力解耦与优势整合</h3>
-      <p>深度融合蓝心大模型的策略生成能力与基于视觉的抓取及传统路径规划能力，验证在无需特定任务微调的情况下，处理桌面复杂操作任务的可行性。</p>
-      <img src="static/images/process.png" alt="系统流程图">
+      <p>深度融合蓝心大模型的策略生成能力、基于视觉的抓取及经典的路径规划能力，验证在无需特定任务微调的情况下，处理桌面复杂操作任务的可行性。</p>
+      <img src="static/images/arc.png" alt="系统流程图">
     </div>
 
     <div class="card">
@@ -259,39 +266,111 @@
 
   <!-- 系统架构视频 -->
   <section>
-    <h2 class="title">系统架构演示</h2>
+    <h2 class="title">基于蓝心大模型的智能机器人操作Agent——小U</h2>
     <video autoplay muted loop controls>
-      <source src="static/videos/架构视频.mp4" type="video/mp4">
+      <source src="static/videos/架构视频250824.mp4" type="video/mp4">
     </video>
-    <p style="text-align:center; margin-top:1rem; color:#555;">基于蓝心大模型的智能机器人操作Agent系统架构展示</p>
-    <div style="text-align:center;">（小U的自我介绍）</div>
+<!--    <p style="text-align:center; margin-top:1rem; color:#555;">基于蓝心大模型的智能机器人操作Agent——小U</p>-->
+    <div style="text-align:center;">小U的自我介绍</div>
   </section>
 
   <!-- 实机演示 -->
   <section style="background:linear-gradient(135deg,#e6f5ff 0%,#d4ebff 100%); border-radius:20px;">
     <h2 class="title">实机演示</h2>
+
+    <!-- 前三行：一个任务一行 -->
     <div class="card">
-      <h3>任务1: 杂乱桌面中物体识别与抓取</h3>
+      <h3>任务1: 工具使用&场景理解能力</h3>
+      <video controls muted loop>
+        <source src="static/videos/task1.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“帮我加热一下汉堡”</p>
+    </div>
+
+    <div class="card">
+      <h3>任务2: 多样化的策略规划能力</h3>
+      <video controls muted loop>
+        <source src="static/videos/task2.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“帮我清理一下托盘”</p>
+    </div>
+
+    <div class="card">
+      <h3>任务3: 模糊语义理解&人机交互演示</h3>
+      <video controls muted loop>
+        <source src="static/videos/task3.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“把那个给我”</p>
+    </div>
+
+    <!-- 后四个任务：flex布局，每行两个 -->
+<!--        <div class="card">-->
+      <h3>More</h3>
+<!--    </div>-->
+    <div class="demo-flex">
+     <div class="card">
+      <h3>任务4: 杂乱桌面中物体识别与抓取</h3>
       <video controls muted loop>
         <source src="static/videos/给我苹果.mp4" type="video/mp4">
       </video>
       <p>输入指令：“给我苹果”</p>
     </div>
+
     <div class="card">
-      <h3>任务2: 物品识别与空间关系理解能力</h3>
+      <h3>任务5: 物品识别与空间关系理解能力</h3>
       <video controls muted loop>
         <source src="static/videos/把苹果放到汉堡右面.mp4" type="video/mp4">
       </video>
       <p>输入指令：“把苹果放到汉堡右面”</p>
     </div>
+
     <div class="card">
-      <h3>任务3: 日常生活场景演示</h3>
+      <h3>任务6: 日常生活场景演示</h3>
       <video controls muted loop>
         <source src="static/videos/帮我把苹果放进抽屉.mp4" type="video/mp4">
       </video>
       <p>输入指令：“帮我把苹果放进抽屉”</p>
     </div>
+    <div class="card">
+      <h3>任务7: 日常生活场景演示</h3>
+      <video controls muted loop>
+        <source src="static/videos/帮我把汉堡放进抽屉.mp4" type="video/mp4">
+      </video>
+      <p>输入指令：“帮我把汉堡放进抽屉”</p>
+    </div>
+
+ </div>
+
+
   </section>
+    <section>
+   <h2 class="title">系统内部运行过程</h2>
+    <div class="card">
+      <video controls muted loop>
+        <source src="static/videos/苹果抽屉电脑界面.mp4" type="video/mp4">
+      </video>
+      <p style="text-align:center;">“帮我把苹果放进抽屉”运行过程</p>
+    </div>
+    <div class="card">
+      <video controls muted loop>
+        <source src="static/videos/汉堡抽屉电脑界面.mp4" type="video/mp4">
+      </video>
+      <p style="text-align:center;">“帮我把汉堡放进抽屉”运行过程</p>
+    </div>
+        </section>
+  <style>
+    .demo-flex {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .demo-flex .card {
+      flex: 1;
+      min-width: 30%;
+    }
+  </style>
+
 <!-- 弹窗结构 -->
 <div id="imgModal">
   <span id="closeModal">&times;</span>
